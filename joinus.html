@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <title> website blogs </title>
+   <link rel = "stylesheet" href=" style.css">
+<!-- HEADER -->
+</head>
+<body>
+    <div class="contact">
+        <div class="navbar">
+            <div class="icon">
+                <h2 class = "logo">N<img src="logowhite.png" style="width: 25px" height="25px">madBug</h2>
+    </div>
+    <div class="menu">
+        <ul>
+            <li><a href="index.html">HOME</a></li>
+            <li><a href="newsletter.html">NEWSLETTER</a></li>
+            <li>
+                <div class="dropdown">
+                    <button class="dropbtn">TECH
+                        <i class="fa fa-caret-down"></i>
+                    </button>
+                    <div class="dropdown-content">
+                        <a href="automobile.html">AUTOMOBILE</a>
+                      <a href="gadget360.html">GADGET 360</a>
+                    </div>
+                </div>
+            </li>
+            <li><a href="finance.html">FINANCE</a></li>
+            <li><a href="career.html">CAREER</a></li>
+
+            <li>
+                <div class="dropdown">
+                    <button class="dropbtn">ABOUT US
+                      <i class="fa fa-caret-down"></i>
+                    </button>
+                    <div class="dropdown-content">
+                      <a href="whoweare.html">WHO WE ARE</a>
+                      <a href="disclaimer.html">DISCLAIMER</a>
+                      <a href="privecypolicy.html">PRIVACY POLICY</a>
+                      <a href="contact.html">CONTACT US</a>
+                    </div>
+                  </div>
+            </li>
+        </ul>
+    </div>
+   
+        </div>
+
+        <div class="containerjoinus">
+            <h1>Subscribe to NomadBus</h1>
+            <p>Stay updated with our latest news and offers!</p>
+            <div class="subscribe-form">
+              <input type="email" id="emailInput" placeholder="Enter your Gmail">
+              <br><br><br>
+              <button onclick="subscribe()">Subscribe</button>
+            </div>
+          </div>
+        
+          <div id="popup" class="popup">
+            <span class="popup-message">NomadBus is subscribed!</span>
+          </div>
+        
+          <script>
+            function subscribe() {
+                const emailInput = document.getElementById('emailInput');
+                const popup = document.getElementById('popup');
+              
+                if (validateEmail(emailInput.value)) {
+                  popup.style.display = 'block';
+                  setTimeout(() => {
+                    popup.style.display = 'none';
+                    emailInput.value = '';
+                  }, 2000);
+                } else {
+                  alert('Please enter a valid Gmail address.');
+                }
+              }
+              
+              function validateEmail(email) {
+                const regex = /^[a-zA-Z0-9._-]+@gmail\.com$/;
+                return regex.test(email);
+              }
+              
+          </script>
+
+    <!-- FOOTER -->
+
+
+    
+    
+</body>
+</html>
